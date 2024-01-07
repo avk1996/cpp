@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+class A
+{
+public:
+    A()
+    {
+        cout << "A constructor" << endl;
+    }
+};
+class B : public A
+{
+public:
+    B()
+    {
+        cout << "B constructor" << endl;
+    }
+};
+
+int main()
+{
+    A a;
+    B b;
+    return 0;
+}
