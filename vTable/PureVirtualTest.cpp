@@ -3,11 +3,16 @@ using namespace std;
 
 /*
 For Base Class:
-Here we have 3 function in a base class
+Here we have 3 function virtual in a base class and 1 pure virtual
+One pure virtual function makes the whole class abstract
+Result: 1. we cannot instantiate this class
+        2. whichever class derives from this base class has to implements its pure virtual methods.
+        3. It is not mandatory to implement JUST virtual functions in derived class.
 */
 class Base
 {
 public:
+    // impure virtual function
     virtual void function1()
     {
         cout << "In Base function1()" << endl;
@@ -20,6 +25,7 @@ public:
     {
         cout << "In Base function3()" << endl;
     }
+    // PURE VIRTUAL FUNCTION
     virtual void function4() = 0;
 };
 class Derived1 : public Base
@@ -65,7 +71,7 @@ int main()
     bp2Der2->function3();
 
     // deleting objects
-    delete bp;
+    // delete bp;
     delete bp2Der1;
     delete bp2Der2;
 
