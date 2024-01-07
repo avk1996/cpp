@@ -3,24 +3,35 @@ using namespace std;
 
 class A
 {
+private:
+    int privy;
+
 public:
+    A(int x = 10) : privy(x) {}
     A()
     {
         cout << "A constructor" << endl;
     }
-};
-class B : public A
-{
-public:
-    B()
+
+    void getter()
     {
-        cout << "B constructor" << endl;
+        cout << privy << endl;
     }
 };
+// class B : public A
+// {
+// public:
+//     B()
+//     {
+//         cout << "B constructor" << endl;
+//     }
+// };
 
 int main()
 {
-    A a;
-    B b;
+    A a(10);
+    // A x;
+    a.getter();
+    // B b;
     return 0;
 }
