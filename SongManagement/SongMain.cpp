@@ -1,5 +1,5 @@
 #include "Song.cpp"
-#inclue < iostream>
+#include <iostream>
 using namespace std;
 
 int main()
@@ -22,6 +22,7 @@ int main()
         cout << "Enter lyrics of song: " << endl;
         for (int j = 0; j < 30; j++)
         {
+            cout << "Enter Line " << j + 1;
             getline(cin, lyr[j]);
         }
         songs[i].setSongLyrics(lyr);

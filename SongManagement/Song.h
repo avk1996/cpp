@@ -11,13 +11,12 @@
 // accept 10 words from user check whether word exists in the file,
 // if found display message word found, else display messag word not found.
 #include <string>
-
 class Song
 {
 private:
     static int songId;
-    string songLyrics[30];
-    string singerName;
+    std::string songLyrics[30];
+    std::string singerName;
     int songDuration;
 
 public:
